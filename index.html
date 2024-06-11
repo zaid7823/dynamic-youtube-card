@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Video Card Builder</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+                /* font-weight: 600; */
+        }
+
+        body {
+            background-color: #1f1f1f;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: max(70vw, 900px);
+            height: 100vh;
+            margin: auto;
+        }
+
+        .card {
+            display: flex;
+            gap: 15px;
+        }
+
+        #thumbnail {
+            border-radius: 10px;
+
+        }
+
+        #title {
+            color: white;
+        }
+
+        .metadata {
+            font-size: 14px;
+            color: grey;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .img {
+            position: relative;
+        }
+
+        .duration {
+            /* z-index: 1; */
+            padding: 1px 4px;
+            background-color: #1b1b1b9d;
+            position: absolute;
+            border-radius: 5px;
+            bottom: 8px;
+            right: 6px;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <img id="thumbnail" src="" alt="">
+                <p class="duration"></p>
+            </div>
+            <div class="details">
+                <h3 id="title"></h3>
+                <p class="metadata"></p>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
